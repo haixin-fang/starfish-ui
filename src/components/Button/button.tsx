@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 import classNames from 'classnames'
 
 export enum ButtonSize {
@@ -21,17 +21,21 @@ interface BaseButtonProps {
     href?: string;
     children: React.ReactNode
 }
-
-const Button: React.FC<BaseButtonProps> = (props) => {
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement> // button标签上默认的属性，如autoFocus 各种事件
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement> // a标签合并自定义属性和默认属性
+export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps> // 里面的类型不一定都需要定义
+const Button: React.FC<ButtonProps> = (props) => {
     const {
         btnType,
         disabled,
         size,
         children,
-        href
+        href,
+        className,
+        ...restProps
     } = props
     // 所有的Button组件都有btn 类
-    const classes = classNames('btn', {
+    const classes = classNames('btn', className, {
         [`btn-${btnType}`]: btnType, 
         // 如果key是动态变化的可以使用中括号来组成。
         // 只要用户传入了btnType，则设置用户传入的，否则使用默认
@@ -43,7 +47,8 @@ const Button: React.FC<BaseButtonProps> = (props) => {
         return (
             <a 
             className={classes}
-            href={href}>
+            href={href}
+            {...restProps}>
                 {children}
             </a>
         )
@@ -51,6 +56,7 @@ const Button: React.FC<BaseButtonProps> = (props) => {
         return (
         <button
             className={classes}
+            {...restProps}
             disabled={disabled} //button里面自己就有disabled属性
         >{children}</button>
         )
