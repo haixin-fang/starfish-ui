@@ -1,0 +1,4 @@
+// 有_的样式文件是不能编译为css文件，而导入的时候要把样式去掉
+@import 'variables.scss';
+// layout
+@import 'reboot.scss';
