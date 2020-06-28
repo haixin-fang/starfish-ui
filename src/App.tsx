@@ -16,14 +16,14 @@ const App = () => {
         <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>链接</Button>
       </div>
       <div className='menu1'>
-        <Menu defaultIndex={0} mode="vertical">
-          <MenuItem index={0} >
+        <Menu defaultIndex={0} mode="vertical" onSelect={(index) => alert(index)}>
+          <MenuItem >
             cool link 1
           </MenuItem>
-          <MenuItem index={1}>
+          <MenuItem >
             cool link 2
           </MenuItem>
-          <MenuItem index={2}>
+          <MenuItem>
             cool link 3
           </MenuItem>
         </Menu>
