@@ -15,15 +15,15 @@ const App = () => {
         <Button btnType={ButtonType.Link} href="https://www.baidu.com">链接有效</Button>
         <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>链接</Button>
       </div>
-      <div className='menu'>
-        <Menu defaultIndex={0}>
-          <MenuItem>
+      <div className='menu1'>
+        <Menu defaultIndex={0} mode="vertical">
+          <MenuItem index={0} >
             cool link 1
           </MenuItem>
-          <MenuItem>
+          <MenuItem index={1}>
             cool link 2
           </MenuItem>
-          <MenuItem>
+          <MenuItem index={2}>
             cool link 3
           </MenuItem>
         </Menu>
