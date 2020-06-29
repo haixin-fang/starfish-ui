@@ -1,7 +1,11 @@
 import React, {useContext, useState, FunctionComponentElement} from 'react'
+import Icon from '../Icon/icon'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons' 
 import classNames from 'classnames'
 import {MenuContext} from './menu'
 import {MenuItemProps} from './menuItem'
+library.add(fas)
 
 export interface SubMenuProps {
     index?: string;
@@ -64,6 +68,7 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
         <li key={index} className={classes} {...mouseEvents}>
             <div className="submenu-title" {...clickEvents}>
                 {title}
+                <Icon icon="angle-down" className="arrow-icon"/>
             </div>
             {renderChildren()}
         </li>
