@@ -5,7 +5,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames'
 import {MenuContext} from './menu'
 import {MenuItemProps} from './menuItem'
-import {CSSTransition} from 'react-transition-group'
+// import {CSSTransition} from 'react-transition-group'
+import Transition from '../Transition/transition'
 library.add(fas)
 
 export interface SubMenuProps {
@@ -62,16 +63,16 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
             }
         }) 
         return (
-            <CSSTransition
-                in={menuOpen}
-                timeout={1000}
-                classNames='fade'
+            <Transition
+                in={menuOpen} // in给元素自动添加display
+                timeout={300}
+                animation='zoom-in-left'
                 appear={false}
             >
                 <ul className={ subMenuClasses }>
                     {childComponent}
                 </ul>
-            </CSSTransition>
+            </Transition>
         )
     }
     return (
