@@ -26,7 +26,7 @@ const App = () => {
         <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>链接</Button>
       </div>
       <div className='menu1'>
-        <Menu defaultIndex='0' defaultOpenSubMenu={['1']}>
+        <Menu defaultIndex='0' >
           <MenuItem >
             cool link 1
           </MenuItem>

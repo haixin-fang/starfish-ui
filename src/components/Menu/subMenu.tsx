@@ -5,6 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames'
 import {MenuContext} from './menu'
 import {MenuItemProps} from './menuItem'
+import {CSSTransition} from 'react-transition-group'
 library.add(fas)
 
 export interface SubMenuProps {
@@ -24,6 +25,8 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
     const [menuOpen, setOpen] = useState(isOpened)
     const classes = classNames('menu-item submenu-item', className, {
         'is-active': context.index.slice(0,1) === index,
+        'is-opened': menuOpen,
+        'is-vertical': context.mode === 'vertical'
     })
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault()
@@ -59,9 +62,16 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
             }
         }) 
         return (
-            <ul className={ subMenuClasses }>
-                {childComponent}
-            </ul>
+            <CSSTransition
+                in={menuOpen}
+                timeout={1000}
+                classNames='fade'
+                appear={false}
+            >
+                <ul className={ subMenuClasses }>
+                    {childComponent}
+                </ul>
+            </CSSTransition>
         )
     }
     return (
@@ -70,6 +80,7 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
                 {title}
                 <Icon icon="angle-down" className="arrow-icon"/>
             </div>
+           
             {renderChildren()}
         </li>
     )
