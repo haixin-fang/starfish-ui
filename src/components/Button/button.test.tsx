@@ -12,8 +12,8 @@ import Button, {ButtonProps, ButtonType, ButtonSize} from './button';
 // });
 
 const TestProps: ButtonProps = {
-    btnType: ButtonType.Primary,
-    size: ButtonSize.Large,
+    btnType: 'primary',
+    size: 'lg',
     className: 'kiss'
 }
 
@@ -35,7 +35,7 @@ describe('test Button component', () => {
         expect(element).toHaveClass('btn btn-primary kiss btn-lg')
     })
     it('should render a link when btntype equals link and href is provided', () => {
-        const wrapper = render(<Button btnType={ButtonType.Link} href="http://www.baidu.com">Link</Button>)
+        const wrapper = render(<Button btnType='link' href="http://www.baidu.com">Link</Button>)
         const element = wrapper.getByText('Link')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('A')
@@ -43,7 +43,7 @@ describe('test Button component', () => {
 
     })
     it('should render disabled button when disabled', () => {
-        const wrapper = render(<Button disabled btnType={ButtonType.Link} href="http://www.baidu.com">Link</Button>)
+        const wrapper = render(<Button disabled btnType='link' href="http://www.baidu.com">Link</Button>)
         const element = wrapper.getByText('Link')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('A')

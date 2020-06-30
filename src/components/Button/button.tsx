@@ -1,18 +1,20 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+// import PropTypes from 'prop-types';
 import classNames from 'classnames'
 
-export enum ButtonSize {
-    Large = 'lg',
-    Small = 'sm'
-}
+// export enum ButtonSize {
+//     Large = 'lg',
+//     Small = 'sm'
+// }
+export type ButtonSize = 'lg' | 'sm'
 
-export enum ButtonType {
-    Primary = 'primary',
-    Default = 'default',
-    Danger = 'danger',
-    Link = 'link'
-}
-
+// export enum ButtonType {
+//     Primary = 'primary',
+//     Default = 'default',
+//     Danger = 'danger',
+//     Link = 'link'
+// }
+export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
 interface BaseButtonProps {
     className?: string;
     disabled?: boolean;
@@ -24,7 +26,7 @@ interface BaseButtonProps {
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement> // button标签上默认的属性，如autoFocus 各种事件
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement> // a标签合并自定义属性和默认属性
 export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps> // 里面的类型不一定都需要定义
-const Button: React.FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
     const {
         btnType,
         disabled,
@@ -40,10 +42,10 @@ const Button: React.FC<ButtonProps> = (props) => {
         // 如果key是动态变化的可以使用中括号来组成。
         // 只要用户传入了btnType，则设置用户传入的，否则使用默认
         [`btn-${size}`]: size,
-        'disabled':  (btnType === ButtonType.Link) && disabled
+        'disabled':  (btnType === 'link') && disabled
         //因为a链接里面没有disabled属性，就需要判断是否需要
     })
-    if(btnType === ButtonType.Link && href){
+    if(btnType === 'link' && href){
         return (
             <a 
             className={classes}
@@ -62,8 +64,14 @@ const Button: React.FC<ButtonProps> = (props) => {
         )
     }
 }
+
+// Button.propTypes = {
+//     /** 这里text是注释 */
+//     className: PropTypes.string,
+//     btnType: PropTypes.string
+// }
 Button.defaultProps = {
     disabled: false,
-    btnType: ButtonType.Default
+    btnType: 'default'
 }
-export default Button
+export default Button;
