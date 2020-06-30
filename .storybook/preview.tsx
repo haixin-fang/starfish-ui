@@ -4,7 +4,8 @@ import {withInfo} from '@storybook/addon-info'
 import "../src/styles/index.scss"
 
 const wrapperStyle: React.CSSProperties = {
-  padding: '20px 40px'
+  padding: '20px 40px',
+  width: '500px'
 }
 
 const storyWrapper = (stroyFn: any) => (
@@ -29,15 +30,15 @@ addParameters({
     ...stylesheet,
     infoBody: {
         ...stylesheet.infoBody,
-        padding: '15px 40px 15px'
+        padding: '20px 40px 20px'
              },
-    header: {
-        ...stylesheet.header,
-        h1: {
-            ...stylesheet.header.h1,
-            color: '#0d6efd',
+        header: {
+            ...stylesheet.header,
+            h1: {
+                ...stylesheet.header.h1,
+                color: '#0d6efd',
+                    },
                 },
-            },
         }),
     }
  });

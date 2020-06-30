@@ -1,4 +1,4 @@
-import React, {useContext, useState, FunctionComponentElement} from 'react'
+import React, {useContext, useState, FunctionComponentElement, FC} from 'react'
 import Icon from '../Icon/icon'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons' 
@@ -11,11 +11,13 @@ library.add(fas)
 
 export interface SubMenuProps {
     index?: string;
+    /**	下拉菜单选项的文字 */
     title: string;
+    /**下拉菜单选型的扩展类名 */
     className?: string;
 }
 
-const SubMenu: React.FC<SubMenuProps> = (props) => {
+export const SubMenu: FC<SubMenuProps> = (props) => {
     const { index, title, className, children} = props;
     const context = useContext(MenuContext)
     const defaultOpenSubMenu = context.defaultOpenSubMenu
@@ -89,4 +91,4 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 
 SubMenu.displayName = 'SubMenu'
 
-export default SubMenu
+export default SubMenu;

@@ -16,16 +16,30 @@ export type ButtonSize = 'lg' | 'sm'
 // }
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
 interface BaseButtonProps {
+    /**选项扩展的 className */
     className?: string;
+    /** 设置Button禁用 */
     disabled?: boolean;
+    /** 设置Button尺寸 */
     size?: ButtonSize;
+    /** 设置Button类型 */
     btnType?: ButtonType;
+    /** 设置Button超链接 */
     href?: string;
     children: React.ReactNode
 }
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement> // button标签上默认的属性，如autoFocus 各种事件
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement> // a标签合并自定义属性和默认属性
 export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps> // 里面的类型不一定都需要定义
+/**
+ * 页面中最常用的的按钮元素，适合于完成特定的交互
+ * ### 引用方法
+ * 
+ * ~~~js
+ * import { Button } from 'roadsign'
+ * ~~~
+ */
+
 export const Button: FC<ButtonProps> = (props) => {
     const {
         btnType,

@@ -14,19 +14,13 @@ const App = () => {
   const [show, setShow] =useState(false)
   return (
     <div>
-      {/* <FontAwesomeIcon icon={faCoffee} size="10x"/> */}
-      {/* <Icon theme='danger' icon='arrow-down' size="10x"/> */}
+      {/* <FontAwesomeIcon icon={faCoffee} size="10x"/>
+      <Icon theme='danger' icon='arrow-down' size="10x"/> */}
       <div className='button'>
         <Button disabled>disabled Default</Button>
-        <Button btnType={ButtonType.Primary} autoFocus>Primary</Button>
-        <Button btnType={ButtonType.Danger}>Danger</Button>
-        <Button btnType={ButtonType.Default}>Default</Button>
-        <Button size={ButtonSize.Small}>Small</Button>
-        <Button size={ButtonSize.Large}>Large</Button>
-        <Button btnType={ButtonType.Link} href="https://www.baidu.com">链接有效</Button>
-        <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>链接</Button>
+        <Button btnType='primary' autoFocus>Primary</Button>
       </div>
-      <Button size={ButtonSize.Large} onClick={() => setShow(!show)}>Large</Button>
+      <Button size='lg' onClick={() => setShow(!show)}>Large</Button>
       <Transition
         in={show}
         animation='zoom-in-bottom'
@@ -34,11 +28,11 @@ const App = () => {
         timeout={300}
         wrapper={true}
       >
-        <Button btnType={ButtonType.Primary} autoFocus>Primary</Button>
-        <Button btnType={ButtonType.Primary} autoFocus>Primary</Button>
+        <Button btnType='primary' autoFocus>Primary</Button>
+        <Button btnType='danger' autoFocus>Danger</Button>
       </Transition>
       <div className='menu1'>
-        <Menu defaultIndex='0' >
+        <Menu defaultIndex='0' onSelect={(index) =>alert(index)}>
           <MenuItem >
             cool link 1
           </MenuItem>

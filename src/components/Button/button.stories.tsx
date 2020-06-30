@@ -26,6 +26,19 @@ const buttonWithType = () => (
 
 
 storiesOf('Button 按钮', module)
+    .addParameters(
+        {
+            info: {
+                text: `
+                页面中最常用的的按钮元素，适合于完成特定的交互
+                ### 引用方法
+                ~~~js
+                import { Button } from 'roadsign'
+                ~~~
+                `
+            }
+        }
+    )
     .add('默认 Button', (defaultButton))
     .add('不同尺寸的 Button', buttonWithSize)
     .add('不同类型的 Button', buttonWithType)
