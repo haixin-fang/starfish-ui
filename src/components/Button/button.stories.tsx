@@ -6,22 +6,22 @@ import Button from './button'
 const defaultButton = () => (
     <>
     <Button onClick={action('clicked')} btnType='default'>default button</Button>
-    <Button disabled>disabled button</Button>
+    <Button disabled style={{marginLeft: "30px"}}>disabled button</Button>
     </>
 )
 const buttonWithSize = () => (
     <>
         <Button size='sm'>Small Button</Button>
-        <Button size='lg'>Large Button</Button>
+        <Button size='lg' style={{marginLeft: "30px"}}>Large Button</Button>
     </>
 )
 const buttonWithType = () => (
-    <>
+    <div style={{width: "600px"}}>
         <Button btnType='primary' autoFocus>Primary Button</Button>
-        <Button btnType='danger'>Danger Button</Button>
-        <Button btnType='link' href="https://github.com/fhx10012091/roadsign.git">Link</Button>
-        <Button btnType='link' href="https://github.com/fhx10012091/roadsign.git" disabled>Disabled Link</Button>
-    </>
+        <Button btnType='danger' style={{marginLeft: "15px"}}>Danger Button</Button>
+        <Button btnType='link' href="https://github.com/fhx10012091/roadsign.git" style={{marginLeft: "15px"}}>Link</Button>
+        <Button btnType='link' href="https://github.com/fhx10012091/roadsign.git" disabled style={{marginLeft: "15px"}}>Disabled Link</Button>
+    </div>
 )
 
 

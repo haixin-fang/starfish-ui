@@ -30,7 +30,7 @@ const SizeInput = () => (
 const DiffInput = () => (
     <>
         <Input
-        defaultValue="prepend text"
+        defaultValue="github.com/fhx10012091/roadsign"
         prepend="https://"
         />
         <Input
