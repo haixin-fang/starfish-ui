@@ -60,6 +60,7 @@
       opacity: 1;
     }
   }
+  
   .input-group-prepend,
   .input-group-append {
     display: flex;
@@ -79,6 +80,9 @@
   .input-group-append + .btn {
     padding: 0;
     border: 0;
+  }
+  .input-group{
+      padding: 0;
   }
   .input-group > .input-group-prepend,
   .input-group.input-group-append > .input-inner {

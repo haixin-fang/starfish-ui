@@ -85,7 +85,7 @@ const MenuDefaultVeriable = () => (
 )
 storiesOf('Menu 菜单', module)
     .add('Menu', (MenuDefault))
-    .add('纵向 Menu', (MenuVeriable))
+    .add('纵向的 Menu', (MenuVeriable))
     .add('默认展开的纵向 Menu', (MenuDefaultVeriable))
 
 

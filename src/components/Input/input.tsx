@@ -13,6 +13,14 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
     append?: string | ReactElement;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
+/**
+ * Input 输入框 通过鼠标或键盘输入内容，是最基础的表单域的包装。
+ * ### 引用方法
+ * 
+ * ~~~js
+ * import { Input } from 'roadsign'
+ * ~~~
+ */
 
 export const Input: FC<InputProps> = (props) => {
     const {
@@ -50,7 +58,6 @@ export const Input: FC<InputProps> = (props) => {
             {icon && <div className="icon-wrapper"><Icon icon={icon} title={`title-${icon}`}/></div>}
             <input 
             className="input-inner"
-            type='text' 
             disabled={disabled} 
             {...restProps}/>
             {append && <div className="input-group-append">{append}</div>}
