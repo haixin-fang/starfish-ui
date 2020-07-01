@@ -9,6 +9,7 @@ import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
 import Transition from './components/Transition/transition'
+import Input from './components/Input/input'
 // library.add(fas) // 把所有相关的图标一起引用
 const App = () => {
   const [show, setShow] =useState(false)
@@ -52,6 +53,33 @@ const App = () => {
           </MenuItem>
         </Menu>
       </div>
+      <Input
+    placeholder="漂亮的 Input"
+  />
+  <Input
+    disabled
+    placeholder="disabled input"
+  />
+  <Input
+    icon="search"
+    placeholder="input with icon"
+  />
+  <Input
+      defaultValue="large size"
+      size="lg"
+    />
+    <Input
+      placeholder="small size"
+      size="sm"
+    />
+    <Input
+      defaultValue="prepend text"
+      prepend="https://"
+    />
+    <Input
+      append=".com"
+      defaultValue="google"
+    />
     </div>
   );
 }
