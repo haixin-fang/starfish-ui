@@ -33,7 +33,16 @@ export const Input: FC<InputProps> = (props) => {
         // 因为append是一个字符串等，要确定为boolean，只能!!
         'input-group-prepend': !!prepend
     })
-
+    const setValueInitOrDefault = (value: any) => {
+        if(typeof value === 'undefined' || value === null){
+            return ''
+        }
+        return value
+    }
+    if('value' in props){
+        delete props.defaultValue
+        props.value = setValueInitOrDefault(props.value)
+    }
     return (
         // 会根据属性判断是否添加不同节点
         <div style={style} className={classes}>
