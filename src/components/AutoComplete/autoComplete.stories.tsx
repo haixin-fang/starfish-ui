@@ -1,14 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import AutoComplete, {DataSourceType} from './autocomplete'
-interface LakerPlayerProps {
-    value: string;
-    number: number;
-  }
+import AutoComplete from './autocomplete'
+
 const AutoCompleteDefault = () => {
-    // const lakers = ['bradley', 'pope', 'caruso', 'cook', 'cousins',
-    // 'james', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando']
+
       const lakersWithNumber = [
     {value: 'bradley', number: 11},
     {value: 'pope', number: 1},
@@ -24,36 +20,14 @@ const AutoCompleteDefault = () => {
     const handleFetch = (query: string) => {
         return lakersWithNumber.filter(item => item.value.includes(query))
     }
-    // const handleFetch = (query: string) => {
-    //     return fetch(`https://api.github.com/search/issues?q=${query}`)
-    //         .then(res => res.json())
-    //         .then(({item}) => {
-    //             console.log('item' +item)
-    //             const formatItems = item.slice(0, 10).map((item: any) => ({
-    //                 value: item.login, ...item
-    //             }))
-    //             return formatItems
-    //         })
-    // }
-    const handleRender = (item: DataSourceType) => {
-        const items = item as DataSourceType<LakerPlayerProps>
-        return (
-            <>
-                <h3>
-                    {items.value}
-                </h3>
-                <p>{items.number}</p>
-            </>
-        )
-    }
+
     return (
         <AutoComplete 
         fetchSuggestions={handleFetch}
-        // renderOption={handleRender}
         onSelect={action('select')}/>
     )
 }
 
-storiesOf('AutoComplete ', module)
+storiesOf('AutoComplete', module)
     .add('AutoComplete', (AutoCompleteDefault))
 
