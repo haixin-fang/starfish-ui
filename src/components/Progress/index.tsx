@@ -1,2 +1,3 @@
-import Input from './input'
-export default Input;
+import Progress from './progress'
+
+export default Progress
