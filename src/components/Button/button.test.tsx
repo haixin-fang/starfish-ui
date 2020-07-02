@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Button, {ButtonProps, ButtonType, ButtonSize} from './button';
+import Button, {ButtonProps} from './button';
 
 // 测试用例必须使用命令行npm test 
 
