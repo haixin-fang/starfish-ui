@@ -5,7 +5,7 @@ export interface ProgressProps {
     showText?: boolean;
     strokeHeight?: number;
     styles?: React.CSSProperties;
-    theme?: ThemeProps
+    theme?: ThemeProps;
 }
 export const Progress: FC<ProgressProps> = (props) => {
     const {
@@ -13,7 +13,7 @@ export const Progress: FC<ProgressProps> = (props) => {
         strokeHeight,
         showText,
         styles,
-        theme,
+        theme
     } = props
     return (
         <div className="progress-bar" style={styles}>
