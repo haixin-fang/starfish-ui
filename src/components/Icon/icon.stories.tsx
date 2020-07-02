@@ -143,7 +143,7 @@ const BehaviorIcon = () => (
     </>
 )
 
-storiesOf('Icon 图标', module)
+storiesOf('三、Icon 图标', module)
     .add('Icon', (defaultIcon))
     .add('不同主题 Icon', (diffThemeIcon))
     .add('不同行为 Icon', (BehaviorIcon), 

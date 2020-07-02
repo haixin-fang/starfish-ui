@@ -5,7 +5,7 @@ import "../src/styles/index.scss"
 
 const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px',
-  width: '500px'
+  width: '600px'
 }
 
 const storyWrapper = (stroyFn: any) => (

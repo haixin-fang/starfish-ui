@@ -25,7 +25,7 @@ const buttonWithType = () => (
 )
 
 
-storiesOf('Button 按钮', module)
+storiesOf('一、Button 按钮', module)
     .addParameters(
         {
             info: {

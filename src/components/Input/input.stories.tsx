@@ -41,7 +41,7 @@ const DiffInput = () => (
     </>
 )
 
-storiesOf('Input 输入框', module)
+storiesOf('四、Input 输入框', module)
     .add('Input', (DefaultInput))
     .add('被禁用 Input', (DisabledInput))
     .add('不同尺寸的Input', (SizeInput))
