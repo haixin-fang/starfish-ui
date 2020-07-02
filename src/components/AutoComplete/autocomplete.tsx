@@ -60,7 +60,7 @@ type DataSourceType<T = {}> = T & DataSourceObject
     * ### 引用方法
     * 
     * ~~~js
-    * import { AutoComplete } from 'roadsign'
+    * import { AutoComplete } from 'starfish-ui'
     * ~~~
   */
  export const AutoComplete: FC<AutoCompleteProps> = (props) => {

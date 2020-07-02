@@ -30,7 +30,7 @@ const SizeInput = () => (
 const DiffInput = () => (
     <>
         <Input
-        defaultValue="github.com/fhx10012091/roadsign"
+        defaultValue="github.com/fhx10012091/starfish-ui"
         prepend="https://"
         />
         <Input
@@ -41,7 +41,7 @@ const DiffInput = () => (
     </>
 )
 
-storiesOf('四、Input 输入框', module)
+storiesOf('Input 输入框', module)
     .add('Input', (DefaultInput))
     .add('被禁用 Input', (DisabledInput))
     .add('不同尺寸的Input', (SizeInput))

@@ -53,7 +53,7 @@ export interface UploadProps {
  * ### 引用方法
  * 
  * ~~~js
- * import { Upload } from 'roadsign'
+ * import { Upload } from 'starfish-ui'
  * ~~~
  */
 export const Upload: FC<UploadProps> = (props) => {

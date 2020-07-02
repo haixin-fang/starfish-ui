@@ -36,7 +36,7 @@ export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps> // 里面
  * ### 引用方法
  * 
  * ~~~js
- * import { Button } from 'roadsign'
+ * import { Button } from 'starfish-ui'
  * ~~~
  */
 

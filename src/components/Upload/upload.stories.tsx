@@ -73,7 +73,7 @@ const SizeUpload = () => {
 }
 
 
-storiesOf("六、Upload 文件上传", module)
+storiesOf("Upload 文件上传", module)
     .add('Upload', (FirstUpload))
     .add('检测上传文件大小', SizeUpload, {
         info: {

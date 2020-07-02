@@ -25,7 +25,7 @@ const buttonWithType = () => (
 )
 
 
-storiesOf('一、Button 按钮', module)
+storiesOf('Button 按钮', module)
     .addParameters(
         {
             info: {
@@ -33,7 +33,7 @@ storiesOf('一、Button 按钮', module)
                 页面中最常用的的按钮元素，适合于完成特定的交互
                 ### 引用方法
                 ~~~js
-                import { Button } from 'roadsign'
+                import { Button } from 'starfish-ui'
                 ~~~
                 `
             }

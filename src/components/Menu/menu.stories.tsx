@@ -83,7 +83,7 @@ const MenuDefaultVeriable = () => (
         </Menu>
     </>
 )
-storiesOf('二、Menu 菜单', module)
+storiesOf('Menu 菜单', module)
     .add('Menu', (MenuDefault))
     .add('纵向的 Menu', (MenuVeriable))
     .add('默认展开的纵向 Menu', (MenuDefaultVeriable))

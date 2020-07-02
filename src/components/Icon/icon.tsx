@@ -17,7 +17,7 @@ export interface IconProps extends FontAwesomeIconProps {
  * ### 引用方法
  * 
  * ~~~js
- * import { Icon } from 'roadsign'
+ * import { Icon } from 'starfish-ui'
  * ~~~
  */
 export const Icon: FC<IconProps> = (props) => {

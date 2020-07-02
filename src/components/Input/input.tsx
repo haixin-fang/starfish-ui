@@ -23,7 +23,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
  * ### 引用方法
  * 
  * ~~~js
- * import { Input } from 'roadsign'
+ * import { Input } from 'starfish-ui'
  * ~~~
  */
 

@@ -28,6 +28,6 @@ const AutoCompleteDefault = () => {
     )
 }
 
-storiesOf('五、AutoComplete', module)
+storiesOf('AutoComplete', module)
     .add('AutoComplete', (AutoCompleteDefault))
 

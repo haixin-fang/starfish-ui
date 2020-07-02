@@ -5,9 +5,9 @@ storiesOf('Welcome page', module)
   .add('welcome', () => {
     return (
       <div style={{width: "1000px"}}>
-        <h1 >欢迎来到 roadsign 组件库</h1>
+        <h1 >欢迎来到 starfish-ui 组件库</h1>
         <h4 style={{marginTop: "30px"}}>使用 REACT+TYPESCRIPT 从零到一打造一打造自己的组件库</h4>
-        <p>roadsign 是个人级别的React UI组件库</p>
+        <p>starfish-ui 是个人级别的React UI组件库</p>
         <h5 style={{
             marginTop: "30px", 
             fontWeight: 700}}>安装</h5>
@@ -16,8 +16,8 @@ storiesOf('Welcome page', module)
             marginTop: "10px",
             display: "inline-block",
             padding: "10px 300px 10px 15px"}}>
-          npm install roadsign --save<br></br>
-          yarn add antd
+          npm install starfish-ui --save<br></br>
+          yarn add starfish-ui
         </code>
         <h5 style={{
             marginTop: "30px", 
@@ -28,9 +28,9 @@ storiesOf('Welcome page', module)
             display: "inline-block",
             padding: "10px 300px 10px 15px"}}>
           // 加载样式<br></br>
-        import 'roadsign/dist/index.css'<br></br>
+        import 'starfish-ui/dist/index.css'<br></br>
         // 引入组件<br></br>
-        import {'Button'} from 'roadsign'<br></br>
+        import {'Button'} from 'starfish-ui'<br></br>
         </code>
         <h5 style={{
             marginTop: "30px", 
