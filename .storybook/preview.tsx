@@ -16,10 +16,10 @@ const storyWrapper = (stroyFn: any) => (
 )
 addDecorator(storyWrapper)
 const loaderFn = () => {
-  // const allExports = [require('../src/welcome.stories.tsx')];
+  const allExports = [require('../src/components/welcome.stories.tsx')];
   const req = require.context('../src/components', true, /\.stories\.tsx$/);
   req.keys().forEach(filename => req(filename));
-  // return allExports;
+  return allExports;
 };
 addDecorator(withInfo)
 addParameters({
