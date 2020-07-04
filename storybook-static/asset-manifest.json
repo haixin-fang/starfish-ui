@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fhx10012091/starfish-ui/static/css/main.315fd4a6.chunk.css",
+    "main.js": "/fhx10012091/starfish-ui/main.d145cfef0c3b1619c3ee.bundle.js",
+    "main.css.map": "/fhx10012091/starfish-ui/static/css/main.315fd4a6.chunk.css.map",
+    "main.js.map": "/fhx10012091/starfish-ui/main.d145cfef0c3b1619c3ee.bundle.js.map",
+    "runtime~main.js": "/fhx10012091/starfish-ui/runtime~main.d145cfef0c3b1619c3ee.bundle.js",
+    "runtime~main.js.map": "/fhx10012091/starfish-ui/runtime~main.d145cfef0c3b1619c3ee.bundle.js.map",
+    "vendors~main.css": "/fhx10012091/starfish-ui/static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.js": "/fhx10012091/starfish-ui/vendors~main.d145cfef0c3b1619c3ee.bundle.js",
+    "vendors~main.css.map": "/fhx10012091/starfish-ui/static/css/vendors~main.f8f248a5.chunk.css.map",
+    "vendors~main.js.map": "/fhx10012091/starfish-ui/vendors~main.d145cfef0c3b1619c3ee.bundle.js.map",
+    "iframe.html": "/fhx10012091/starfish-ui/iframe.html",
+    "precache-manifest.06eb2a6a15eace1fb564f14f23dedd31.js": "/fhx10012091/starfish-ui/precache-manifest.06eb2a6a15eace1fb564f14f23dedd31.js",
+    "service-worker.js": "/fhx10012091/starfish-ui/service-worker.js",
+    "vendors~main.d145cfef0c3b1619c3ee.bundle.js.LICENSE.txt": "/fhx10012091/starfish-ui/vendors~main.d145cfef0c3b1619c3ee.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.d145cfef0c3b1619c3ee.bundle.js",
+    "static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.d145cfef0c3b1619c3ee.bundle.js",
+    "static/css/main.315fd4a6.chunk.css",
+    "main.d145cfef0c3b1619c3ee.bundle.js"
+  ]
+}
