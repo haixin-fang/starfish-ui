@@ -1,0 +1,36 @@
+$alert-theme-colors: 
+(
+  "default":    $primary,
+  "success":    $success,
+  "warning":    $warning,
+  "danger":     $danger
+);
+
+.alert {
+    padding: .75rem 1.25rem;
+    width: 378px;
+    border: 1px solid transparent;
+    box-sizing: content-box;
+    color: $white;
+    background: $blue;
+    border-radius: .25rem;
+    position: relative;
+    @each $key, $value in $alert-theme-colors{
+        &.alert-#{$key}{
+            background: $value
+        }
+    }
+    .close-icon-alert{
+        padding: .75rem 1.25rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &.hidden-icon{
+            display: none;
+        }
+    }
+    p{
+        margin: 0;
+    }
+
+}
