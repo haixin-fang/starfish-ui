@@ -1,0 +1,44 @@
+.input-number{
+    width: 11.25rem;
+    border: 1px solid #dcdfe6;
+    line-height: 38px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    color: gray;
+    cursor: pointer;
+    &.disabled{
+        background: #eceff7;
+        cursor: not-allowed;
+        color: #ccc;
+    }
+    .left{
+        position: absolute;
+        top: 0;
+        width: 40px;
+        background: #eceff7;
+        text-align: center;
+        font-size: 1.25rem;
+        border-right: 1px solid #dcdfe6;
+        cursor: pointer;
+        &.is-disabled{
+            cursor: not-allowed
+        }
+    }
+    .right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        background: #eceff7;
+        text-align: center;
+        font-size: 1.25rem;
+        border-left: 1px solid #dcdfe6;
+        &.is-disabled{
+            cursor: not-allowed
+        }
+    }
+    .number{
+        text-align: center;
+    }
+}

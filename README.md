@@ -3,6 +3,13 @@
 
 [![Build Status](https://travis-ci.com/fhx10012091/starfish-ui.svg?branch=master&status=started)](https://travis-ci.com/fhx10012091/starfish-ui)
 
+### 文档 
+
+**[文档页面1](https://fang_haixin.gitee.io/starfish)**
+
+**[文档页面2](https://fhx10012091.github.io/starfish/)**
+
+
 ### 安装试试
 
 ~~~javascript
