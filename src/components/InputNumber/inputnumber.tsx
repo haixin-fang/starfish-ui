@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect} from 'react'
+import React, {FC, useState} from 'react'
 import classNames from 'classnames'
 
 export type sizeType = 'lg' | 'sm' 
@@ -29,6 +29,7 @@ export interface IInputNumber {
  * import { InputNumber } from 'starfish-ui'
  * ~~~
  */
+
 export const InputNumber: FC<IInputNumber> = (props) => {
     const {disabled, step, min, max, stepStrict, change, num} = props;
     const [number, setNumber] = useState<number>((stepStrict && step?step:num?num:1))
